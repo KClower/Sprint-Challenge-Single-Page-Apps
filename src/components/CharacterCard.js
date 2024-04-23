@@ -11,15 +11,15 @@ import {
 
 export default function CharacterCard(props) {
 
-  
-    let history = useHistory();
+
+  let history = useHistory();
 
   const clickHandler = () => {
-   history.push(`/SelectedCharacterCard/${props.id}`, props.character)
+    history.push(`/SelectedCharacterCard/${props.id}`, props.character)
   }
   console.log(props)
   return (
-    <Card onClick={clickHandler} className="my-3"
+    <Card data-cy={`characterCard-${props.id}`} onClick={clickHandler} className="my-3"
       style={{
         width: '18rem'
       }}
@@ -29,21 +29,23 @@ export default function CharacterCard(props) {
         src={props.image}
       />
       <CardBody>
-        <CardTitle tag="h5">
+        <CardTitle data-cy="cardTitle" tag="h5" className="mb-3">
           {props.name}
         </CardTitle>
-        <CardSubtitle
-          className="mb-2 text-muted"
+        <CardSubtitle data-cy="cardSubtitle"
+          className="mb-3 text-muted"
           tag="h6"
         >
           {props.species}: {props.status}
         </CardSubtitle>
-        <CardText>
-          <p>Location: {props.location.name}</p>
-          <p>Origin: {props.origin.name}</p>
+        <CardText data-cy="cardLocation" className="mb-0">
+          Location: {props.location.name}
         </CardText>
-        <CardText className="fw-light fst-italic">
-          <p>Episodes: {props.episodes.length}</p>
+        <CardText data-cy="cardOrigin">
+          Origin: {props.origin.name}
+        </CardText>
+        <CardText data-cy="cardEpisode" className="fw-light fst-italic">
+          Episodes: {props.episodes.length}
         </CardText>
       </CardBody>
     </Card>

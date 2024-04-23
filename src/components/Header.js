@@ -1,8 +1,5 @@
 import React, {useState} from "react";
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
   Nav,
   NavItem,
   NavLink,
@@ -21,13 +18,13 @@ export default function Header() {
      
           <Nav className="justify-content-center">      
             <NavItem>
-              <NavLink tag={RRNavLink} to="/">Home</NavLink>
+              <NavLink data-cy="homeLink" tag={RRNavLink} to="/">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to="/character">Characters</NavLink>
+              <NavLink data-cy="characterLink" tag={RRNavLink} to="/character">Characters</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to="/location">Locations</NavLink>
+              <NavLink data-cy="locationLink" tag={RRNavLink} to="/location">Locations</NavLink>
             </NavItem>
           </Nav>
         
