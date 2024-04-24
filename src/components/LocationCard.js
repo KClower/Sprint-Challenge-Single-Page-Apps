@@ -4,31 +4,30 @@ import {
   CardHeader,
   ListGroup,
   ListGroupItem,
-}from "reactstrap";
+} from "reactstrap";
 
 
 
 
 export default function LocationCard({ name, type, dimension, residents }) {
-  
+
   return (
-  <Card className="my-3"
-  style={{
-    width: '18rem'
-  }}
->
-  <CardHeader className="fw-bold">
-    {name}
-  </CardHeader>
-  <ListGroup flush>
-    <ListGroupItem>
-      {type}: {dimension}
-    </ListGroupItem>
-    <ListGroupItem className="fw-light fst-italic">
-     Residents: {residents.length}
-    </ListGroupItem>
-    
-  </ListGroup>
-</Card>
+    <Card data-cy="locationCard" className="my-3"
+      style={{
+        width: '18rem'
+      }}
+    >
+      <CardHeader data-cy="locationName" className="fw-bold">
+        {name}
+      </CardHeader>
+      <ListGroup flush>
+        <ListGroupItem data-cy="locationDesc">
+          {type}: {dimension}
+        </ListGroupItem>
+        <ListGroupItem data-cy="locationResidents" className="fw-light fst-italic">
+          Residents: {residents.length}
+        </ListGroupItem>
+      </ListGroup>
+    </Card>
   )
 }

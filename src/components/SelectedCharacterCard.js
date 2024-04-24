@@ -38,7 +38,7 @@ export default function SelectedCharacterCard(props) {
 
     return (
         <>
-            <Card
+            <Card data-cy={`selectedCharacterCard-${character.id}`}
                 style={{
                     width: '100%'
                 }}
@@ -49,15 +49,15 @@ export default function SelectedCharacterCard(props) {
                         src={character.image}
                     />
                     <CardBody >
-                        <CardTitle tag="h1" className="text-center">
+                        <CardTitle data-cy="characterName" tag="h1" className="text-center">
                             {character.name}
                         </CardTitle>
                         <CardSubtitle
                             className="mb-2 text-muted text-center mt-5"
                             tag="h4">
-                            <p>{character.species}: {character.status}</p>
-                            <p>Location: {character.location.name}</p>
-                            <p>Origin: {character.origin.name}</p>
+                            <p data-cy="characterSpecies">{character.species}: {character.status}</p>
+                            <p data-cy="characterLocation">Location: {character.location.name}</p>
+                            <p data-cy="characterOrigin">Origin: {character.origin.name}</p>
                         </CardSubtitle>
                     </CardBody>
                 </section>
@@ -71,19 +71,19 @@ export default function SelectedCharacterCard(props) {
                     {episodes.map(e => {
                         return (
 
-                            <Card className=" col-4 px-0"
+                            <Card data-cy="episodeCard" className=" col-4 px-0"
                                 style={{
                                     width: '14rem'
                                 }}
                             >
-                                <CardHeader>
+                                <CardHeader data-cy="episodeName">
                                     {e.name}
                                 </CardHeader>
                                 <ListGroup flush>
-                                    <ListGroupItem>
+                                    <ListGroupItem data-cy="episodeNumber">
                                         {e.episode}
                                     </ListGroupItem>
-                                    <ListGroupItem>
+                                    <ListGroupItem data-cy="episodeDate">
                                         {e.airDate}
                                     </ListGroupItem>
                                 </ListGroup>
