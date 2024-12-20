@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Sprint-Challenge-Single-Page-Apps/static/css/main.67b50b61.css",
-    "main.js": "/Sprint-Challenge-Single-Page-Apps/static/js/main.4a746bf1.js",
+    "main.js": "/Sprint-Challenge-Single-Page-Apps/static/js/main.dcc19260.js",
     "index.html": "/Sprint-Challenge-Single-Page-Apps/index.html",
     "main.67b50b61.css.map": "/Sprint-Challenge-Single-Page-Apps/static/css/main.67b50b61.css.map",
-    "main.4a746bf1.js.map": "/Sprint-Challenge-Single-Page-Apps/static/js/main.4a746bf1.js.map"
+    "main.dcc19260.js.map": "/Sprint-Challenge-Single-Page-Apps/static/js/main.dcc19260.js.map"
   },
   "entrypoints": [
     "static/css/main.67b50b61.css",
-    "static/js/main.4a746bf1.js"
+    "static/js/main.dcc19260.js"
   ]
 }
